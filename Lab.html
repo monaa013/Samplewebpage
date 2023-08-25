@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="exam.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+	<script type='text/javascript'>
+    function GetMap() {
+        var map = new Microsoft.Maps.Map('#myMap', {
+            credentials: 'AjdH6vWQlyrL3w_EI_BJIKlyLIhXgyUhClEbewFtVlizeiLMQrWOqhL0IjFNbG5N		'
+        });
+
+        //Request the user's location
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var loc = new Microsoft.Maps.Location(
+                position.coords.latitude,
+                position.coords.longitude);
+
+            //Add a pushpin at the user's location.
+            var pin = new Microsoft.Maps.Pushpin(loc);
+            map.entities.push(pin);
+
+            //Center the map on the user's location.
+            map.setView({ center: loc, zoom: 100 });
+        });
+    }
+    </script>
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
+</head>
+<body>
+    <header>
+        <h1>LingoQuest</h1>
+        <p>Learn like playing</p>
+    </header>
+    <nav>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#MoreInfo">MoreInfo</a></li>
+        <li><a href="#Register">Register Here</a></li>
+        <li><a href="#Contact">Contact</a></li>
+    </nav>
+    <section>
+        <div id="Home">
+            <div>
+                <h3>LingoQuest</h3>
+                <p>Hi upcoming Professnals. We are making the future professtionals by teaching you,Boosting you,Molding you.
+                    Come and join with us. Learn the computer things with us. <br>
+                    <b>What are 4 types of learning?</b><br>
+                     There are 4 predominant learning styles: Visual, Auditory, Read/Write, and Kinaesthetic.
+                     While most of us may have some general idea about how we learn best, often it comes as a 
+                     surprise when we discover what our predominant learning style is.
+                </p>
+            </div>
+        </div>
+    </section>
+        <div id="MoreInfo">
+            <h3>More Information about the Classes</h3>
+             <div class="mission">
+                <div>
+                    <p>
+                      <b>Lesson</b><br>
+                      A lesson or class is a structured period of time where learning is<br>
+                       intended to occur.It involves one or more students (also called pupils<br>
+                        or learners in some circumstances) being taught by a teacher or instructor.
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>Boot</li>
+                      <li>HTML</li>
+                    </p>
+                </div>
+    
+    
+                <div>
+                    <p>
+                        <b>Features</b>
+                        <li>Takes a Few Seconds to Load</li>
+                        <li>Must be User-Friendly</li>
+                        <li>Must be Mobile-Responsive</li>
+                        <li> Has Cross Browser Compatibility</li>
+                        <li>Takes a Few Seconds to Load</li>
+                    </p>
+                </div>
+             </div>
+        </div>
+    </section>
+    <section>
+        <div id="Register">
+               <h3>Register Here</h3>
+               <div class="reg">
+                  <div>
+                    <form>
+                      <label for="NAME">First Name:</label>
+                      <input type="text" id="NAME"><br>
+                      <label for="Age">Age:</label>
+                      <input type="text" id="Age"><br>
+                      <label for="mail">Mail:</label>
+                      <input type="text" id="mail"><br>
+                      <input type="submit" value="Submit">
+                    </form>
+                  </div>
+                </div>
+        </div>
+    </section>
+    <section>
+        <div id="Contact">
+            <h3>Contact</h3>
+            <p>Gmail:lingoquestcontact@gmail.com<br>
+               Phone: 999999999<br>
+               <Address>Christ University<br>
+                        Central Block<br>
+                        Room No:813</Address></p>           
+        </div>
+    </section>    
+    <footer>
+        <p>&copy; 2023 Priya Dharshini. All rights reserved.</p>
+    </footer>
+</body>
+</html>
